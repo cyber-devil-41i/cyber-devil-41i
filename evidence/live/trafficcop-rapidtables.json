@@ -1,0 +1,174 @@
+{
+ "url": "https://www.rapidtables.com/",
+ "log": [
+  {
+   "method": "GET",
+   "url": "https://c.pubguru.net/pg.rapidtables.com.js",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://c.pubguru.net/v/tc-260303-61d-nc-9087a951a17c3cf228d61210096ed48a.js",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://a3.pubguru.net/?device=desktop&domain=rapidtables.com",
+   "body": ""
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/stream?beacon=test",
+   "body": "{}"
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/stream?beacon=immediate",
+   "body": "{\"streams\":[{\"stream\":\"events\",\"base\":{\"code\":\"tcf_ping_not_applies\",\"tcfGdprApplies\":false,\"tcfCmpLoaded\":true,\"tcfCmpStatus\":\"loaded\",\"tcfDisplayStatus\":\"disabled\",\"tcfApiVersion\":\"2.3\",\"tcfCmpVersion\":91,\"tcfCmpId\":229,\"tcfTcfPolicyVersion\":5,\"description\":\"{\\\"gdpr\\\":\\\"skip-geo\\\", \\\"ccpa\\\":\\\"??\\\", \\\"lgpd\\\":\\\"??\\\", \\\"code\\\":\\\"tcf-ping-not-applies\\\", \\\"tcfGdprApplies\\\":false, \\\"tcfCmpLoaded\\\":true, \\\"tcfCmpStatus\\\":\\\"loaded\\\", \\\"tcfDisplayStatus\\\":\\\"disabled\\\", \\\"tcfApiVersion\\\":\\\"2.3\\\", \\\"tcfCmpVersion\\\":91, \\\"tcfCmpId\\\":229, \\\"tcfTcfPolicyVersion\\\":5} {\\\"gdprApplies\\\":false, \\\"cmpLoaded\\\":true, \\\"cmpStatus\\\":\\\"loaded\\\", \\\"displayStatus\\\":\\\"disabled\\\", \\\"apiVersion\\\":\\\"2.3\\\", \\\"cmpVersion\\\":91, \\\"cmpId\\\":229, \\\"tcfPolicyVersion\\\":5, \\\"pinged\\\":1793169729928}\",\"stream\":\"events\",\"timestamp\":1793169729929,\"id\":\"71e0c66a-fbcc-4fe3-b8ef-735c17c11109\",\"cohort\":{\"build\":\"260303-61d\",\"branch\":\"tc-mod-clicks\",\"version\":\"tc-modular\",\"id\":\"4234\",\"updatedAt\":\"2603031217\",\"loader\":\"pg.rapidtables.com.js\",\"buildFile\":\"260303-61d-nc-9087a951a17c3cf228d61210096ed48a\",\"splitPercent\":\"1.00\"},\"environment\":{\"analyticsEnabled\":\"false\",\"lazy\":\"false\",\"spa\":\"false\",\"vignette\":\"disabled\",\"fnInitDefined\":\"false\"}},\"objects\":[{}]},{\"stream\":\"pageviews\",\"base\":{\"id\":\"935928fb-ac64-49bb-a054-a07fda6aedfb\",\"stream\":\"pageviews\",\"stage\":\"afterInit\",\"environment\":{\"perfPgStartDuration\":\"1806\",\"downlink\":\"10\",\"connectionEffectiveType\":\"4g\",\"rtt\":\"-1\",\"floorSource\":\"disabled\",\"rebidMultiplier\":\"0.7\",\"analyticsEnabled\":\"false\",\"lazy\":\"false\",\"spa\":\"false\",\"vignette\":\"disabled\",\"fnInitDefined\":\"false\"},\"timeorigin\":1793169727289.5,\"msDomComplete\":-1,\"msDomInteractive\":1200,\"msAdRequest\":-1,\"msAdRender\":-1,\"msStart\":2431,\"msInit\":2623,\"msAcq\":2648,\"msAtq\":null,\"msAsq\":2623,\"msGoogletagCmd\":-1,\"resolution\":\"1280x720\",\"colorDepth\":24,\"timezoneOffset\":0,\"language\":\"en\",\"vendor\":\"WebKit\",\"renderer\":\"WebKit WebGL\",\"appName\":\"Netscape\",\"appCodeName\":\"Mozilla\",\"navigatorProduct\":\"Gecko\",\"navigatorSubproduct\":\"20030107\",\"platform\":\"Linux x86_64\",\"unmaskedRenderer\":\"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)\",\"touchSupport\":0,\"sessionStorage\":true,\"openDatabase\":true,\"cookieStorage\":true,\"dnt\":null,\"heapSizeLimit\":3760000000,\"pluginList\":\"\",\"mimeTypeList\":\"\",\"timestamp\":1793169729961,\"cohort\":{\"build\":\"260303-61d\",\"branch\":\"tc-mod-clicks\",\"version\":\"tc-modular\",\"id\":\"4234\",\"updatedAt\":\"2603031217\",\"loader\":\"pg.rapidtables.com.js\",\"buildFile\":\"260303-61d-nc-9087a951a17c3cf228d61210096ed48a\",\"splitPercent\":\"1.00\"},\"pageviewId\":\"02018407-dbb3-44ad-8f89-d7f7f85f4c65\"},\"objects\":[{}]}],\"allBase\":{\"gdpr\":\"skip-geo\",\"source\":\"pghb\",\"url\":\"https://www.rapidtables.com/\",\"domain\":\"rapidtables.com\",\"build\":\"260303-61d\",\"file\":\"tc-260303-61d-nc-9087a951a17c3cf228d61210096ed48a.js\",\"userId\":\"30cce4a3-f08f-4dec-81ac-cb0e4b848f30\",\"sessionId\":\"44b879d7-9e73-4799-bbf9-6c04d5191a6f\",\"referrer\":\"/direct/\",\"canonical\":\"www.rapidtables.com/\",\"m2_config\":\"12085-260303-61d@1.00\",\"m2Canonical\":\"fc209f2e3d01e57f5bb6c46f676ff9a0\",\"configId\":\"12085\",\"splitPercent\":1,\"stagingPercent\":0,\"analyticsPercent\":0.1,\"dfpNetwork\":\"\",\"gamNetwork\":\"\",\"gamNetworkParent\":\"\",\"gamNetworkChild\":\"\",\"device\":\"desktop\",\"ip\":\"??\",\"sessionDepth\":1,\"country\":\"??\",\"region\":\"??\",\"utmSource\":\"/empty/\",\"utmMedium\":\"/empty/\",\"utmContent\":\"/empty/\",\"utmTerm\":\"/empty/\",\"utmCampaign\":\"/empty/\",\"localStorage\":true,\"screenWidth\":\"1280\",\"screenHeight\":\"720\",\"adblock\":false,\"cmp\":\"onpage-229\",\"ccpa\":\"??\",\"lgpd\":\"??\",\"sendType\":\"immediate\"}}"
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/tc",
+   "body": "{\"all_mime_types\":0,\"installedPlugins\":0,\"historyCount\":2,\"diffHeight\":0,\"diffWidth\":0,\"dimensionChanged\":0,\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36\",\"sourceIP\":\"\",\"ipAddressModified\":0,\"uaModified\":0,\"mouseClick\":0,\"keypressed\":0,\"touchEventCount\":0,\"touchMoveCount\":0,\"counterMouseMove\":0,\"counterScroll\":0,\"publisher\":\"rapidtables.com\",\"device\":\"desktop\",\"honeypot\":0,\"isHeadLess\":1,\"isAndroid\":false,\"detectedBrowser\":\"\",\"detectedEngine\":\"blink\",\"lastResponseTime\":0,\"lastLatencyBeforeTc\":0,\"headlessBrowserName\":\"WebDriver\",\"supportsLocalStorage\":true,\"pageShowCounter\":0,\"clickOnZero\":0,\"currentHeapSize\":10000000,\"heapSizeLimit\":3760000000,\"insideIframe\":false,\"iframeParentUrl\":\"\",\"platform\":\"Linux x86_64\",\"inner\":\"1280x720\",\"outer\":\"1280x720\",\"screen\":\"1280x720x24\",\"resolution\":\"1280x720\",\"renderer\":\"WebKit WebGL\",\"vendor\":\"WebKit\",\"unmaskedRenderer\":\"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)\",\"unmaskedVendor\":\"Google Inc. (Google)\",\"audioContext\":1,\"appCodeName\":\"Mozilla\",\"appName\":\"Netscape\",\"colorDepth\":24,\"dnt\":null,\"navigatorProduct\":\"Gecko\",\"navigatorSubproduct\":\"20030107\",\"pluginList\":\"\",\"mimeTypeList\":\"\",\"timezoneOffset\":0,\"touchSupport\":0,\"touchEvent\":false,\"touchStart\":false,\"language\":\"en\",\"cookieStorage\":true,\"sessionStorage\":true,\"openDatabase\":true,\"addBehavior\":false,\"colorgamut\":\"srgb\",\"cpuClass\":0,\"isSeleniumChrome\":false,\"isAutomation\":false,\"evalLength\":33,\"close\":\"function close() { [native code] }\",\"external\":\"[object External]\",\"isBigEndian\":false,\"isDevToolsOpen\":true,\"devToolsString\":\"match-media,console\",\"innerWidthChanged\":false,\"deviceChanged\":\"\",\"availWidth\":1280,\"navigatorProperties\":\"vendorSub,productSub,vendor,maxTouchPoints,scheduling,userActivation,geolocation,doNotTrack,webkitTemporaryStorage,webkitPersistentStorage,windowControlsOverlay,hardwareConcurrency,cookieEnabled,appCodeName,appName,appVersion,platform,product,userAgent,language,languages,onLine,webdriver,plugins,mimeTypes,pdfViewerEnabled,connection,getGamepads,javaEnabled,sendBeacon,vibrate,cpuPerformance,deprecatedRunAdAuctionEnforcesKAnonymity,protectedAudience,clipboard,credentials,keyboard,managed,mediaDevices,serviceWorker,virtualKeyboard,wakeLock,deviceMemory,userAgentData,locks,storage,gpu,login,ink,mediaCapabilities,permissions,devicePosture,hid,mediaSession,presentation,serial,usb,xr,storageBuckets,adAuctionComponents,runAdAuction,canLoadAdAuctionFencedFrame,clearAppBadge,getBattery,getUserMedia,requestMIDIAccess,requestMediaKeySystemAccess,setAppBadge,webkitGetUserMedia,clearOriginJoinedAdInterestGroups,createAuctionNonce,joinAdInterestGroup,leaveAdInterestGroup,updateAdInterestGroups,deprecatedReplaceInURN,deprecatedURNToURL,getInstalledRelatedApps,getInterestGroupAdAuctionData,registerProtocolHandler,unregisterProtocolHandler\",\"isPhantom\":false,\"isHidden\":0,\"applePaySupport\":false,\"applePayVersion\":-1,\"deviceModel\":\"\",\"devicePlatformVersion\":\"\",\"devicePlatform\":\"\",\"trafficCopOverClock\":false,\"radiusX0\":false,\"redirectCount\":0,\"ancestorOriginsLength\":0,\"getUserMedia\":2,\"engineVariables\":{\"chrome\":false,\"opr\":false,\"opera\":false,\"CSS\":true,\"documentMode\":false,\"styleMedia\":true,\"installTriggerDefined\":false,\"supportsMozUserSelectUnset\":false,\"supportsWebkitBoxReflectUnset\":true,\"webkitUrl\":true,\"webkitAppearanceDefined\":true,\"navigatorProduct\":\"Gecko\",\"navigatorSubproduct\":\"20030107\",\"xpath\":true,\"querySelector\":true,\"safari\":false,\"pushNotification\":false,\"mozScreen\":false},\"reporting\":{\"url\":\"https://www.rapidtables.com/\",\"domain\":\"rapidtables.com\",\"build\":\"260303-61d\",\"file\":\"tc-260303-61d-nc-9087a951a17c3cf228d61210096ed48a.js\",\"userId\":\"30cce4a3-f08f-4dec-81ac-cb0e4b848f30\",\"sessionId\":\"44b879d7-9e73-4799-bbf9-6c04d5191a6f\",\"timestamp\":1793169730001,\"id\":\"e9106376-f57d-4b7c-898a-feae82d91772\",\"stream\":\"test\",\"referrer\":\"/direct/\",\"cohort\":{\"build\":\"260303-61d\",\"branch\":\"tc-mod-clicks\",\"version\":\"tc-modular\",\"id\":\"4234\",\"updatedAt\":\"2603031217\",\"loader\":\"pg.rapidtables.com.js\",\"buildFile\":\"260303-61d-nc-9087a951a17c3cf228d61210096ed48a\",\"splitPercent\":\"1.00\"},\"environment\":{\"analyticsEnabled\":false,\"lazy\":false,\"spa\":false,\"vignette\":\"disabled\",\"fnInitDefined\":false},\"canonical\":\"www.rapidtables.com/\",\"m2_config\":\"12085-260303-61d@1.00\",\"m2Canonical\":\"fc209f2e3d01e57f5bb6c46f676ff9a0\",\"configId\":\"12085\",\"splitPercent\":1,\"stagingPercent\":0,\"analyticsPercent\":0.1,\"dfpNetwork\":\"\",\"gamNetwork\":\"\",\"gamNetworkParent\":\"\",\"gamNetworkChild\":\"\",\"device\":\"desktop\",\"pageviewId\":\"02018407-dbb3-44ad-8f89-d7f7f85f4c65\",\"ip\":\"??\",\"sessionDepth\":1,\"country\":\"??\",\"region\":\"??\",\"utmSource\":\"/empty/\",\"utmMedium\":\"/empty/\",\"utmContent\":\"/empty/\",\"utmTerm\":\"/empty/\",\"utmCampaign\":\"/empty/\",\"localStorage\":true,\"screenWidth\":\"1280\",\"screenHeight\":\"720\",\"adblock\":false,\"cmp\":\"onpage-229\",\"gdpr\":\"skip-geo\",\"ccpa\":\"??\",\"lgpd\":\"??\",\"mm2CookieA\":\"30cce4a3-f08f-4dec-81ac-cb0e4b848f30\",\"browserName\":\"Edge\",\"testPercent\":100,\"timeoutDuration\":1500,\"ivtAction\":\"nocaptcha\",\"domainParamIvtAction\":\"nocaptcha\",\"m2TCKvp\":\"tc-init\",\"previousPVTime\":-1,\"hardwareConcurrency\":4,\"deviceMemory\":16,\"downlink\":10,\"connectionEffectiveType\":\"4g\",\"networkType\":\"unknown\",\"rtt\":-1,\"cookiesEnabled\":true,\"processorLatency\":-1,\"downloadlinkMax\":-1,\"tcRequestLatency\":284},\"previousIVT\":{\"ivtTrace\":\"\",\"botModel\":\"\",\"botPercent\":0,\"captchaSolved\":false},\"timestamp\":1793169730004,\"quick_check\":1,\"knn_check\":0,\"glVersion\":\"WebGL 1.0 (OpenGL ES 2.0 Chromium)\",\"shadingLanguageVersion\":\"WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)\",\"maxTextureSize\":8192,\"maxCubeMapTextureSize\":16384,\"maxRenderBufferSize\":8192,\"maxVertexUniformVectors\":4096,\"maxFragmentUniformVectors\":4096,\"maxVaryingVectors\":31,\"maxCombinedTextureImageUnits\":64,\"powerPreference\":\"default\",\"maxVertexAttribs\":16,\"depthBits\":24,\"stencilBits\":0,\"max3DTextureSize\":2048,\"maxDrawBuffers\":8,\"maxColorAttachments\":8,\"maxSamples\":4,\"supportedExtensionsLength\":35,\"maxTouchPoints\":0,\"pixelDepth\":24,\"devicePixelRatio\":1,\"innerWidth\":1280,\"innerHeight\":720,\"outerWidth\":1280,\"outerHeight\":720,\"availHeight\":720,\"screenWidth\":1280,\"screenHeight\":720,\"deviceMotion\":true,\"deviceOrientation\":true,\"accelerometer\":true,\"pointerCoarse\":false,\"hover\":false,\"pointerFine\":true,\"portrait\":false,\"landscape\":true}"
+  },
+  {
+   "resp": "https://a3.pubguru.net/?device=desktop&domain=rapidtables.com",
+   "status": 200,
+   "body": "{\"country\": \"US\", \"region\": \"\", \"custom_timeout\": \"\", \"bidders_order\": \"\", \"ip\": \"160.79.106.130\", \"adx_multiplier\": \"\", \"base_floor\": \"\"}"
+  },
+  {
+   "resp": "https://a3.pubguru.net/stream?beacon=immediate",
+   "status": 200,
+   "body": "{}"
+  },
+  {
+   "resp": "https://a3.pubguru.net/stream?beacon=test",
+   "status": 200,
+   "body": ""
+  },
+  {
+   "resp": "https://a3.pubguru.net/tc",
+   "status": 200,
+   "body": "{\"bot_percent\": 99.99, \"bot_model\": \"1\", \"bot_reason\": \"mrf\", \"pg_user\": \"\"}"
+  }
+ ],
+ "cookies": [
+  {
+   "name": "pg_last_pageview_data",
+   "value": "{\"cohortId\":\"4234\",\"cohortUpdatedAt\":\"2603031217\",\"configId\":12085}"
+  },
+  {
+   "name": "tc_buildfile",
+   "value": "260303-61d-nc-9087a951a17c3cf228d61210096ed48a"
+  },
+  {
+   "name": "tc_unq_cohort_key",
+   "value": "4234:2603031217"
+  },
+  {
+   "name": "pg_analytics",
+   "value": "0"
+  },
+  {
+   "name": "pg_lazy",
+   "value": "0"
+  },
+  {
+   "name": "pg_session_depth",
+   "value": "1"
+  },
+  {
+   "name": "pg_beacon",
+   "value": "1"
+  },
+  {
+   "name": "pg_mm2_cookie_a",
+   "value": "30cce4a3-f08f-4dec-81ac-cb0e4b848f30"
+  },
+  {
+   "name": "pg_session_id",
+   "value": "44b879d7-9e73-4799-bbf9-6c04d5191a6f"
+  },
+  {
+   "name": "pg_tc",
+   "value": "sample"
+  },
+  {
+   "name": "pg_quick_check",
+   "value": "true"
+  },
+  {
+   "name": "pg_ua",
+   "value": "Mozilla/5.0 (X11 Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36"
+  },
+  {
+   "name": "pg_inner_width",
+   "value": "1280"
+  },
+  {
+   "name": "pg_tc_device",
+   "value": "desktop"
+  },
+  {
+   "name": "pg_latency_before_tc",
+   "value": "323"
+  },
+  {
+   "name": "pg_tc_platform",
+   "value": "Linux"
+  },
+  {
+   "name": "pg_tc_platform_version",
+   "value": ""
+  },
+  {
+   "name": "pg_tc_model",
+   "value": ""
+  },
+  {
+   "name": "pg_pl",
+   "value": "14"
+  },
+  {
+   "name": "pg_geo",
+   "value": "{\"country\":\"US\",\"region\":\"\",\"ip\":\"160.79.106.130\"}"
+  },
+  {
+   "name": "pg_custom_timeout",
+   "value": ""
+  },
+  {
+   "name": "pg_ip",
+   "value": "160.79.106.130"
+  },
+  {
+   "name": "pg_c",
+   "value": "2e544191-4e0f-48c7-b826-02604201df9b"
+  },
+  {
+   "name": "pg_lava",
+   "value": ""
+  },
+  {
+   "name": "pg_bot_percent",
+   "value": "99.99"
+  },
+  {
+   "name": "pg_bot_reason",
+   "value": "mrf"
+  },
+  {
+   "name": "pg_bot_model",
+   "value": "1"
+  },
+  {
+   "name": "pg_tc_response_time",
+   "value": "445"
+  },
+  {
+   "name": "pg_pv_time_1",
+   "value": "15249"
+  }
+ ],
+ "captchaShown": false
+}

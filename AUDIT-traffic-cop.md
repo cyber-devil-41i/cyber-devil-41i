@@ -464,3 +464,162 @@ iframe) wasn't triggered.
 - Exact payload fields of `/exd` and `/pv`.
 - What `ch=1` / `ch=2` map to, and how the verdict is computed from probe results.
 - The recovery branch: what the trusted iframe loads when a blocker *is* found.
+
+---
+
+# Part 7: Verified from the real scripts (live, 2026-10-28)
+
+Once the network opened, both vendors' scripts were downloaded **plainly** (no spoofed
+headers), statically analysed with **REA 6.8.0** plus a manual read of the formatted
+source, then exercised by **one honest headless page load per scenario** (default
+Playwright Chromium; it announces `HeadlessChrome` / `webdriver=true`; no stealth).
+Sites were picked from each company's sellers.json. Captures are in `evidence/live/`;
+vendor scripts are recorded by SHA-256 only (`evidence/live/vendor-script-sha256.txt`).
+
+| Script | Size | REA |
+|---|---|---|
+| `btloader.com/tag` (Blockthrough, `cv=2.1.196`) | 200 KB, 14,336 lines formatted | ok: 53 modules, bait endpoints extracted (`ev_7cbbc189…`) |
+| `btloader.com/recovery` (Blockthrough ad recovery) | **1.07 MB**, 75,643 lines | ok: 221 modules (`ev_a61db399…`) |
+| `c.pubguru.net/tc/trafficcop-async-min-main.js` (build `260531-fe1`) | 153 KB, 6,651 lines | timed out at the 300 s default; re-run in progress |
+
+The Traffic Cop file's SHA-256 `166a1563…` is **identical** to the `responseHash` DuckDuckGo
+Tracker Radar recorded, so Part 2's crawler data refers to this exact build.
+
+## A. Blockthrough: how it works (from code + live runs)
+
+**Site used:** 9gag.com. Live `orgID 5741299960381440` = seller **"9gag"** in Blockthrough's sellers.json.
+
+### 1. Bait configuration (verbatim from `btloader.com/tag`)
+| Bait | Target | Signal |
+|---|---|---|
+| `ad-delivery-ab` | `ad-delivery.net/px.gif?ch=2` | `ab` (an adblocker exists) |
+| `doubleclick-ab` | `ad.doubleclick.net/favicon.ico?ad=300x250&ad_box_=1…` | `ab` |
+| `bt-legacy-bait-element` | `<div class="ad_row adbannertop ad-mobile ad_sidebar adpopup boxad contentAd">` | `ab` (cosmetic filter hides it) |
+| `ad-delivery-aa` | `ad-delivery.net/px.gif?ch=1` | **`aa`: Acceptable Ads allowed** (this one loads *only* if the blocker has AA on) |
+| `element-aa-detection-*` (6 random IDs) | elements classed `content-showcase-itru-sufficient-2d m5c2t8q`… | `aa` (experimental) |
+| `ab-dns-finder-nlf` | `ab.dns-finder.com/meta/dns` | `nlf`: network-level filter (Pi-hole/NextDNS) |
+| `wb-dns-finder-nlf` | `wb.dns-finder.com/meta/dns` | `wb` |
+
+URL baits use `fetch(url+Math.random(), {mode:"no-cors"})`, so a fetch error means blocked. Element
+baits count as blocked if `display:none`, `visibility:hidden`, `offsetParent===null` or height 0.
+Polling: URL up to 2×400 ms, elements 4×200 ms; repeated in iterations.
+
+### 2. Decision (verbatim logic)
+```js
+toSimpleStatus() = { ab, aa, nlf }
+isAAPV()         = ab && aa                       // blocker present AND Acceptable Ads on
+isMonetizablePV()= !isIOSorIPad() && isAAPV()     // et(): /iPad|iPhone|iPod/ or MacIntel+touch
+```
+Verdict cached in `localStorage.BT_AA_DETECTION`.
+
+### 3. Live proof: same page, three blocker states
+| Run | `BT_AA_DETECTION` | What Blockthrough did |
+|---|---|---|
+| no blocker | `{"ab":false,"aa":true,"nlf":false}` | nothing; the site's own ads run |
+| blocker, Acceptable Ads ON (block `ch=2` + doubleclick, allow `ch=1`) | `{"ab":true,"aa":true,"nlf":false}` | **`GET btloader.com/recovery`** (1 MB ad stack) + `POST /ce` (consent) + 2 × `static.btloader.com/safeFrame.html` ad slots |
+| strict blocker (block everything) | `{"ab":true,"aa":false,"nlf":false}` | no recovery; gives up |
+
+### 4. The Adblock Plus back-channel (`trustedIframe.html`)
+- Blockthrough injects `btloader.com/trustedIframe.html` (it returns `400 Missing Referer`
+  unless embedded, so it's meant to run only inside pages).
+- **Adblock Plus / AdBlock (eyeo extensions)** recognise this page: they set
+  `data-adblockplus="true"` / `data-adblock="true"` and expose **`window.sendExtCommand`**.
+- The iframe calls `sendExtCommand({method:"getStatus"})`, which returns per extension
+  `{aa:boolean, allowlist:{status:boolean}, hasPremium…}`, then `getExperimentFlags`.
+- Results go to the parent page by `postMessage`, then to `POST /exd`.
+- So the blocker itself tells Blockthrough whether Acceptable Ads is on, whether the site is
+  allowlisted, and whether the user pays for **Premium**. eyeo owns both sides.
+
+### 5. Exactly what is sent (live request bodies)
+`POST api.btloader.com/exd`:
+```json
+{"websiteID":"5198325289058304","orgID":"5741299960381440","pageUrl":"https://9gag.com/",
+ "extensionsData":{"signals":{"xAcceptableAdsHeader":""},
+   "trustedIframe":{"meta":{"loadStatus":"LOADED","loadTime":318},"htmlSignalAttributes":[]}},
+ "sentOnUnload":false,"sentOnSPAChange":false}
+```
+`POST api.btloader.com/pv`: viewport `vr`, `pageURL`, `aa`, **`pm`** (private/incognito mode,
+from `webkitTemporaryStorage` quota; `true` for headless), plus **`br`**: every bait's result
+with timings.
+`GET cdn.api.btloader.com/device?fullVersionList=<UA Client Hints>` returns
+`{"fiftyonedegrees_deviceId":"15364-18110-148575-132572"}`, a **51Degrees** device-ID lookup,
+cached in `localStorage.BT_device`.
+`GET api.btloader.com/country` returns `{"country":"US","isRestricted":false}`.
+
+### 6. What "recovery" is
+`btloader.com/recovery` is a 1.07 MB bundle: **Prebid.js 11.27.0** with 40+ bidders (Magnite/Rubicon,
+PubMatic, OpenX, AppNexus, Amazon APS, Criteo, TripleLift, Sovrn, 33Across, Smart, Yieldmo…), **Google
+Ad Manager**, and identity modules for **UID2, EUID, LiveRamp IdentityLink, ID5, Criteo ID, LiveIntent,
+SharedID/PubCommonID, Unified ID, IntentIQ, Hadron, 33AcrossID, Teads ID**, plus user-sync pixels.
+Users with Acceptable Ads on get a full header-bidding auction and cross-site ID matching,
+under the label of an "acceptable" ad.
+
+### 7. Security finding: `static.btloader.com/safeFrame.html`
+Its `message` handler has **no `event.origin` check**: `{type:"eval",code}` triggers `window.eval(code)`,
+`{message:"Render Secure Creative",ad}` triggers `document.write(ad)`. Any page that frames it can run
+script in the `static.btloader.com` origin and read or write its `localStorage`
+(`BT_BLOCKLISTED_CREATIVES`). Impact is limited to that sandbox origin, but it's a
+textbook missing-origin-validation bug. **Not exploited.** Fix: allowlist `event.origin`
+and drop the `eval` channel. Report to Blockthrough/eyeo privately.
+
+## B. MonetizeMore Traffic Cop: how it works (from code + live run)
+
+**Site used:** rapidtables.com (loader `pg.rapidtables.com.js`, build `tc-260303-61d`). wvnews.com
+(seller `aaef6323d5` "WV News") was also loaded, but that visit came back `pg_tc=not-sampled`.
+
+### 1. Configuration knobs (from code, per publisher)
+`trafficCopIvtAction` = `measure` | `block` | `nocaptcha` (default `measure`) ·
+`trafficCopBotThreshold` (default **75**) · `tcTestPercent` (share of visitors scored) ·
+`trafficCopTimeoutAction` / `TimeoutDuration` (500 ms) · `trafficCopCaptchaService` (`reCaptcha`) ·
+`trafficCopClickBlocker` (+ thresholds 3 / 30) · `trafficCopFouAnalytics` (sampling, default 1%) ·
+`trafficCopOverClock`.
+
+### 2. Flow
+1. Check consent (`cmp.trackable()`) and sampling (`pg_tc` = `sample` / `not-sampled`).
+2. Attach listeners: **scroll, scrollend, touchstart, touchmove, mousemove, click, keypress, blur,
+   focus**; count events every 50 ms; record page-view time every 250 ms / 5 s.
+3. Inject two **honeypots**: hidden `<a id="hp1">Don't click me</a>` and `<a id="hp2">` with a 1×1
+   image. A click sets `m2_honeypot=1` (10 days).
+4. Run `processorLatency(100)`, a 100³ matrix-multiply CPU benchmark (VMs and bots run slow).
+5. Build `modelInput` (128 fields, below) and `POST a3.pubguru.net/tc` (`withCredentials`) with
+   `quick_check=1`, later `knn_check`, a **k-nearest-neighbour** model on the server.
+6. The server answers `{bot_percent, bot_model, bot_reason, pg_user}`, stored as cookies
+   `m2_bot_percent` (1 d), `m2_bot_reason` (10 d, accumulated), `m2_bot_model`.
+7. If `bot_percent > threshold`: **block mode** shows a reCAPTCHA and ads never load (`pg.atq`
+   queue held). **Measure mode** only reports it. Otherwise `atq.xq()` releases the ad queue.
+8. 1% of sampled visits also load third-party verifiers **FouAnalytics**
+   (`api.fouanalytics.com/api/init-565hn40wyj5jh7gkoy1.js`) and **`api.b2c.com`**, passing `riskLevel`.
+
+### 3. Live verdict on this audit's headless browser
+`POST a3.pubguru.net/tc`, **response**: `{"bot_percent": 99.99, "bot_model": "1", "bot_reason": "mrf", "pg_user": ""}`.
+It correctly flagged an automated browser. rapidtables runs measure mode, so no CAPTCHA was shown.
+
+### 4. The 128 signals actually sent (live `/tc` body; key ones)
+- **Automation:** `isHeadLess=1`, `headlessBrowserName="WebDriver"` (checks `navigator.webdriver`,
+  PhantomJS globals, `window.Buffer/emit/spawn` for Node/CouchJS/Rhino, `__stopAllTimers` for JSDOM),
+  `isAutomation` (Selenium/Nightmare/`$cdc_` ChromeDriver keys, `selenium`/`webdriver` attributes),
+  `isSeleniumChrome` (`document.$cdc_asdjflasutopfhvcZLmcfl_`), `isPhantom`, `evalLength`,
+  `close`/`external` toString checks, **`isDevToolsOpen`** (`devToolsString:"match-media,console"`).
+- **GPU:** `unmaskedRenderer="ANGLE (… SwiftShader …)"` (software rendering is a strong bot
+  signal), plus 20 WebGL limits (`maxTextureSize`, `maxVaryingVectors`, extension count…).
+- **Behaviour:** `mouseClick`, `keypressed`, `counterMouseMove`, `counterScroll`, `touch*` counts
+  (all 0 here), `honeypot`, `clickOnZero`, `pageShowCounter`.
+- **Environment:** `all_mime_types=0`, `installedPlugins=0`, `historyCount`, `inner`/`outer`/`screen`
+  sizes, `diffHeight/diffWidth`, heap size and limit, `timezoneOffset`, language, colour gamut,
+  pointer/hover media queries, device motion/orientation, `navigatorProperties`, iframe nesting,
+  `ancestorOriginsLength`, `redirectCount`.
+- **Identity / continuity:** `userAgent`, `sourceIP`/`ipAddressModified`, `uaModified`, `deviceChanged`,
+  `innerWidthChanged`, `previousIVT` (last verdict), latency cookies.
+- Cookies set on the publisher domain during the visit include `pg_ip`, `pg_geo` (IP + country),
+  `pg_ua` (full UA), `pg_mm2_cookie_a` (1-year UUID), `pg_c`, `pg_lava` (180-day "pg_user").
+
+## C. Side by side
+
+| | Blockthrough (eyeo) | Traffic Cop (MonetizeMore) |
+|---|---|---|
+| Question it answers | Is an adblocker present, and does it allow Acceptable Ads? | Is this visitor a bot? |
+| Core technique | Bait requests + bait elements + **direct API to the user's Adblock Plus/AdBlock** | ~128-signal fingerprint + behaviour + honeypots → **server-side KNN score** |
+| Decision | `ab && aa && !iOS` → serve recovered ads | `bot_percent > 75` → CAPTCHA / withhold ads (block mode) |
+| Where the decision is made | **In the browser** (logic visible) | **On the server** (`a3.pubguru.net/tc`; model not visible) |
+| Money | Acceptable-Ads inventory sold via Prebid + GAM | Protects publisher AdX/AdSense accounts from IVT penalties |
+| Privacy cost | Incognito check, 51Degrees device ID, 12+ cross-site ID systems in recovery | IP + geo + full UA in first-party cookies, 1-year UUID, deep fingerprint |

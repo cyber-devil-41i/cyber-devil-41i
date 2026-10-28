@@ -1,0 +1,154 @@
+{
+ "url": "https://9gag.com/",
+ "mode": "all",
+ "log": [
+  {
+   "method": "GET",
+   "url": "https://btloader.com/tag?o=5741299960381440&upapi=true",
+   "body": null
+  },
+  {
+   "method": "GET",
+   "url": "https://cdn.btloader.com/cchecker.html?upapi=true",
+   "body": null
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=2&e=0.060182103794300446"
+  },
+  {
+   "blocked": "https://ad.doubleclick.net/favicon.ico?ad=300x250&ad_box_=1&adnet=1&showad=1&size=250x250&e=0.08727011680691565"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.07498602385052677"
+  },
+  {
+   "blocked": "https://ab.dns-finder.com/meta/dns"
+  },
+  {
+   "method": "GET",
+   "url": "https://cdn.api.btloader.com/device?orgid=5741299960381440&fullVersionList=%5B%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22153.0.8010.12%22%7D%2C%7B%22brand%22%3A%22Not_A+Brand%22%2C%22version%22%3A%228.0.0.0%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22153.0.8010.12%22%7D%5D&upapi=true",
+   "body": null
+  },
+  {
+   "method": "GET",
+   "url": "https://btloader.com/trustedIframe.html?o=5741299960381440&upapi=true",
+   "body": null
+  },
+  {
+   "method": "POST",
+   "url": "https://api.btloader.com/exd?tid=E1r2vzfQbk-RqQDLhbrW-a1813904e1&sid=yMgquJyw15-yq7lz4eoya-a1813904e1&cv=2.1.196&upapi=true",
+   "body": "{\"websiteID\":\"5198325289058304\",\"orgID\":\"5741299960381440\",\"pageUrl\":\"https://9gag.com/\",\"extensionsData\":{\"signals\":{\"xAcceptableAdsHeader\":\"\"},\"trustedIframe\":{\"meta\":{\"loadStatus\":\"LOADED\",\"loadTime\":426},\"htmlSignalAttributes\":[]}},\"sentOnUnload\":false,\"sentOnSPAChange\":false}"
+  },
+  {
+   "resp": "https://cdn.api.btloader.com/device?orgid=5741299960381440&fullVersionList=%5B%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22153.0.8010.12%22%7D%2C%7B%22brand%22%3A%22Not_A+Brand%22%2C%22version%22%3A%228.0.0.0%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22153.0.8010.12%22%7D%5D&upapi=true",
+   "body": "{\"device\":{\"os\":\"Linux\",\"ext\":{\"fiftyonedegrees_deviceId\":\"15364-18110-148575-132572\"}}}"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.8252649809558903"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=2&e=0.28980276883253875"
+  },
+  {
+   "blocked": "https://ad.doubleclick.net/favicon.ico?ad=300x250&ad_box_=1&adnet=1&showad=1&size=250x250&e=0.5746967503410664"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.12584755827930416"
+  },
+  {
+   "blocked": "https://ab.dns-finder.com/meta/dns"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.46573040970296764"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.7608145316826788"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.9750579120805205"
+  },
+  {
+   "blocked": "https://ad-delivery.net/px.gif?ch=1&e=0.4018543704390273"
+  },
+  {
+   "method": "GET",
+   "url": "https://api.btloader.com/country?o=5741299960381440",
+   "body": null
+  },
+  {
+   "method": "POST",
+   "url": "https://api.btloader.com/pv?nlf=false&tid=E1r2vzfQbk-RqQDLhbrW-a1813904e1&sid=yMgquJyw15-yq7lz4eoya-a1813904e1&cv=2.1.196&upapi=true",
+   "body": "{\"w\":\"5198325289058304\",\"o\":\"5741299960381440\",\"widget\":false,\"vr\":{\"w\":1280,\"h\":720},\"pageURL\":\"https://9gag.com/\",\"spa_view_change\":false,\"un\":false,\"r\":true,\"rt\":0,\"aa\":false,\"retry\":false,\"br\":[{\"name\":\"ad-delivery-ab\",\"type\":\"url\",\"signals\":{\"ab\":true},\"meta\":{\"attempt\":2,\"durMs\":228.29999999981374,\"responseStatus\":null}},{\"name\":\"doubleclick-ab\",\"type\":\"url\",\"signals\":{\"ab\":true},\"meta\":{\"attempt\":2,\"durMs\":264.39999999990687,\"responseStatus\":null}},{\"name\":\"bt-legacy-bait-element\",\"type\":\"element\",\"signals\":{\"ab\":false},\"meta\":{\"attempt\":14,\"durMs\":3258.899999999907}},{\"name\":\"ad-delivery-aa\",\"type\":\"url\",\"signals\":{\"aa\":false},\"meta\":{\"attempt\":7,\"durMs\":3115.399999999907,\"responseStatus\":null}},{\"name\":\"ab-dns-finder-nlf\",\"type\":\"url\",\"signals\":{\"ab\":true},\"meta\":{\"responseStatus\":null}},{\"name\":\"element-aa-detection\",\"type\":\"element\",\"signals\":{\"aa\":false},\"meta\":{\"m5c2t8q\":{\"isHidden\":false,\"attempt\":14,\"durMs\":3258.600000000093},\"v8n6y4p\":{\"isHidden\":false,\"attempt\":14,\"durMs\":3258.5999999996275},\"w3p9m6d\":{\"isHidden\":false,\"attempt\":14,\"durMs\":3258.5999999996275},\"k2y8f7x\":{\"isHidden\":false,\"attempt\":14,\"durMs\":3258.1999999997206},\"q7d5z1l\":{\"isHidden\":false,\"attempt\":14,\"durMs\":3259.1999999997206},\"x9a7b3k\":{\"isHidden\":false,\"attempt\":14,\"durMs\":3259.2999999998137}}}],\"pm\":true}"
+  },
+  {
+   "resp": "https://api.btloader.com/country?o=5741299960381440",
+   "body": "{\"country\":\"US\",\"isRestricted\":false}"
+  }
+ ],
+ "__bt_intrnl": {
+  "traceID": "E1r2vzfQbk-RqQDLhbrW-a1813904e1",
+  "stopFlag": false,
+  "timingLoggerBridge": {},
+  "aaDetectionResults": {
+   "ab": true,
+   "aa": false,
+   "nlf": false
+  },
+  "pageURL": "https://9gag.com/",
+  "tcData": {
+   "cmpId": 7,
+   "cmpVersion": 1,
+   "gdprApplies": false,
+   "tcfPolicyVersion": 5,
+   "listenerId": 6,
+   "eventStatus": "tcloaded",
+   "cmpStatus": "loaded"
+  },
+  "actions": {
+   "trustedIframeInjected": {
+    "5198325289058304": {
+     "E1r2vzfQbk-RqQDLhbrW-a1813904e1": true
+    }
+   },
+   "extensionDataReported": {
+    "5198325289058304": {
+     "E1r2vzfQbk-RqQDLhbrW-a1813904e1": true
+    }
+   },
+   "pvSent": {
+    "5198325289058304": {
+     "E1r2vzfQbk-RqQDLhbrW-a1813904e1": true
+    }
+   }
+  },
+  "device": {
+   "os": "Linux",
+   "ext": {
+    "fiftyonedegrees_deviceId": "15364-18110-148575-132572",
+    "fod": {
+     "tpc": 1
+    }
+   }
+  },
+  "extensionsData": {
+   "signals": {
+    "xAcceptableAdsHeader": ""
+   },
+   "trustedIframe": {
+    "meta": {
+     "loadStatus": "LOADED",
+     "loadTime": 426
+    },
+    "htmlSignalAttributes": []
+   }
+  }
+ },
+ "localStorage": {
+  "BT_tpc": "{\"value\":1,\"expiresAt\":1793183760406}",
+  "BT_AA_DETECTION": "{\"ab\":true,\"aa\":false,\"nlf\":false}",
+  "btUserCountry": "US",
+  "btUserIsFromRestrictedCountry": "false",
+  "BT_device": "{\"value\":{\"os\":\"Linux\",\"ext\":{\"fiftyonedegrees_deviceId\":\"15364-18110-148575-132572\"}},\"expiresAt\":1793183760546}",
+  "btUserCountryExpiry": "1793169663938"
+ }
+}

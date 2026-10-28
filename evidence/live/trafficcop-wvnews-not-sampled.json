@@ -1,0 +1,221 @@
+{
+ "url": "https://www.wvnews.com/",
+ "log": [
+  {
+   "method": "GET",
+   "url": "https://c.pubguru.net/pg.wvnews.js",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://c.pubguru.net/v/pg-260910-fd3-nc-35494c1166053c0502e954e845dcdf54.js",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://a3.pubguru.net/?device=desktop&domain=wvnews.com",
+   "body": ""
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/stream?beacon=immediate",
+   "body": "{\"streams\":[{\"stream\":\"pageviews\",\"base\":{},\"objects\":[{}]}],\"allBase\":{\"id\":\"42890514-991f-4c21-bfa7-e1316eab678c\",\"stream\":\"pageviews\",\"stage\":\"afterInit\",\"environment\":{\"floorSource\":\"manual\",\"downlink\":\"10\",\"connectionEffectiveType\":\"4g\",\"rtt\":\"-1\",\"analyticsEnabled\":\"false\"},\"timeline\":{\"scriptStart\":6286,\"loaderStart\":4706,\"loaderToScript\":1580,\"consentResponse\":143,\"domReady\":143,\"gptReady\":143},\"timestamp\":1793169779776,\"url\":\"https://www.wvnews.com/\",\"referrer\":\"/direct/\",\"cohort\":{\"build\":\"251231-6a1\",\"branch\":\"violet\",\"version\":\"lightning-100\",\"id\":\"4223\",\"updatedAt\":\"2609281229\",\"loader\":\"pg.wvnews.js\",\"buildFile\":\"260910-fd3-nc-35494c1166053c0502e954e845dcdf54\",\"splitPercent\":\"0.90\"},\"domain\":\"wvnews.com\",\"build\":\"260910-fd3\",\"configId\":\"18072\",\"file\":\"unnamed\",\"pageviewId\":\"9d63cb5d-2750-4ff8-82b5-4f65cae602a7\",\"userId\":\"a4f91815-34ed-4cf7-9b59-2c167c90f579\",\"sessionId\":\"4f2c1652-dd36-4817-985a-17858ec8da4d\",\"sessionDepth\":1,\"canonical\":\"www.wvnews.com/\",\"m2Canonical\":\"c2221387bd3e57b197e6bb834dd35b15\",\"analyticsPercent\":0.05,\"dfpNetwork\":\"52317695\",\"device\":\"desktop\",\"ip\":\"??\",\"country\":\"??\",\"region\":\"??\",\"isEu\":false,\"utmSource\":\"/empty/\",\"utmMedium\":\"/empty/\",\"utmContent\":\"/empty/\",\"utmTerm\":\"/empty/\",\"utmCampaign\":\"/empty/\",\"localStorage\":true,\"source\":\"leanscript\",\"sendType\":\"immediate\"}}"
+  },
+  {
+   "method": "GET",
+   "url": "https://c.pubguru.net/exchange-rate.json",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://c.pubguru.net/tc/trafficcop-async-min-main.js",
+   "body": ""
+  },
+  {
+   "resp": "https://a3.pubguru.net/?device=desktop&domain=wvnews.com",
+   "status": 200,
+   "body": "{\"country\": \"US\", \"region\": \"\", \"custom_timeout\": \"\", \"bidders_order\": \"\", \"ip\": \"160.79.106.140\", \"adx_multiplier\": \"\", \"base_floor\": \"\"}"
+  },
+  {
+   "resp": "https://a3.pubguru.net/stream?beacon=immediate",
+   "status": 200,
+   "body": "{}"
+  },
+  {
+   "resp": "https://c.pubguru.net/exchange-rate.json",
+   "status": 200,
+   "body": "{\n  \"generatedAt\": \"2026-10-28T02:00:32.552Z\",\n  \"dataAsOf\": \"2026-10-27T00:00:00.000Z\",\n  \"conversions\": {\n    \"GBP\": {\n      \"AED\": 4.912069542246979,\n      \"ARS\": 2044.9645607070024,\n      \"AUD\": 1.9008358408115682,\n      \"BGN\": 2.334938147698574,\n      \"BRL\": 6.658709461922614,\n      \"CAD\": 1.8727515881017687,\n      \"CHF\": 1.1033099297051974,\n      \"CLP\": 1330.6586421326306,\n      \"COP\": 4208.46539757232,\n      \"CZK\": 29.02995653672173,\n      \"DKK\": 8.922768305267732,\n      \"EGP\": 73.95493146141214,\n      \"EUR\": 1.1938482111312572,\n      \"HKD\": 10.488197927487585,\n      \"HRK\": 8.9948512206148,\n      \"HUF\": 437.6462721095116,\n      \"IDR\": 24179.20406728167,\n      \"ILS\": 4.151989301273885,\n      \"INR\": 126.97091274325476,\n      \"JOD\": 0.9479772650971664,\n      \"JPY\": 209.78936810555524,\n      \"KES\": 173.64092276183214,\n      \"MAD\": 13.132530926326458,\n      \"MXN\": 24.950852558416894,\n      \"MYR\": 5.463724506879895,\n      \"NGN\": 1784.767636798579,\n      \"NOK\": 12.472149782956453,\n      \"NZD\": 2.3465730525056125,\n      \"PEN\": 4.610848610292909,\n      \"PHP\": 85.05289192568866,\n      \"PKR\": 370.6705437276546,\n      \"PLN\": 5.255910048688103,\n      \"RON\": 6.384750849328836,\n      \"RUB\": 107.99359560311107,\n      \"SAR\": 5.019536856588367,\n      \"SEK\": 13.277018679989492,\n      \"SGD\": 1.7092423022255498,\n      \"THB\": 45.15296335524717,\n      \"TRY\": 66.45543699260753,\n      \"TWD\": 43.597647811206166,\n      \"UAH\": 60.68157878081172,\n      \"USD\": 1.3373306488311647,\n      \"VND\": 34558.62998730126,\n      \"ZAR\": 22.18464379785041\n    },\n    \"USD\": {\n      \"AED\": 3.673040430607163,\n      \"ARS\": 1529.1390820170868,\n      \"AUD\": 1.4213656454167938,\n      \"BGN\": 1.7459692184123083,\n      \"BRL\": 4.979104806834695,\n      \"CAD\": 1.4003654142964308,\n      \"CHF\": 0.8250090810896296,\n      \"CLP\": 995.0109520750418,\n      \"COP\": 3146.914640183073,\n      \"CZK\": 21.707388940868206,\n      \"DKK\": 6.672073442021453,\n      \"EGP\": 55.300408710478,\n      \"EUR\": 0.8927098262308487,\n      \"GBP\": 0.7477582308264648,\n      \"HKD\": 7.842636326815911,\n      \"HRK\": 6.72597403527419,\n      \"HUF\": 327.25360216040593,\n      \"IDR\": 18080.198856142604,\n      \"ILS\": 3.1046841743309703,\n      \"INR\": 94.9435450793176,\n      \"JOD\": 0.7088578026127678,\n      \"JPY\": 156.87172674081197,\n      \"KES\": 129.8414292034624,\n      \"MAD\": 9.819958091743707,\n      \"MXN\": 18.65720536669379,\n      \"MYR\": 4.085544970987709,\n      \"NGN\": 1334.5746905288358,\n      \"NOK\": 9.326152656306194,\n      \"NZD\": 1.754669314246654,\n      \"PEN\": 3.4477999994412896,\n      \"PHP\": 63.598999993027455,\n      \"PKR\": 277.17194999727474,\n      \"PLN\": 3.9301499993900544,\n      \"RON\": 4.774249999361898,\n      \"RUB\": 80.75309998877103,\n      \"SAR\": 3.7533999994507514,\n      \"SEK\": 9.927999998798867,\n      \"SGD\": 1.2780999999659306,\n      \"THB\": 33.76349999509182,\n      \"TRY\": 49.692599994391806,\n      \"TWD\": 32.600499995502815,\n      \"UAH\": 45.37514999289652,\n      \"VND\": 25841.500019090807,\n      \"ZAR\": 16.588749997795926\n    }\n  }\n}"
+  },
+  {
+   "method": "GET",
+   "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063933&size_id=15&alt_size_ids=2%2C1%2C16%2C17%2C39%2C40%2C41&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=104e655851939acb8&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=08a72a93-db73-4bbc-8bab-ea58df4721f9&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.8946205181686323",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063933&size_id=15&alt_size_ids=2%2C16%2C55%2C57%2C101%2C221&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=10572b5d0f02b4ef8&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=4c9f45a3-9cb9-49f0-887c-777c9830d383&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.12737813035810552",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063933&size_id=15&alt_size_ids=2%2C16%2C55%2C57%2C101%2C221&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=106207fbd3d87ad58&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=97f5b764-d7e1-4a72-b99e-b72ac9f3b3e4&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.8183439705766066",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063923&size_id=2&alt_size_ids=55%2C57&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=107f5b41f1c48fd28&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=2c7a97a2-87f1-45d4-b9d0-259125740a63&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.3899589615430422",
+   "body": ""
+  },
+  {
+   "method": "GET",
+   "url": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063929&size_id=15&alt_size_ids=9%2C8%2C10%2C19%2C67%2C117&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=1084b082b1ce4d18&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=9e7f9adb-7643-4a82-9a29-b71ca72b009b&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.34994050377578445",
+   "body": ""
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/stream?beacon=test",
+   "body": "{}"
+  },
+  {
+   "resp": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063933&size_id=15&alt_size_ids=2%2C1%2C16%2C17%2C39%2C40%2C41&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=104e655851939acb8&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=08a72a93-db73-4bbc-8bab-ea58df4721f9&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.8946205181686323",
+   "status": 200,
+   "body": "{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"account_id\":10904,\"site_id\":627081,\"zone_id\":4063933,\"size_id\":15,\"alt_size_ids\":[2,16],\"tracking\":\"\",\"inventory\":{\"page\":\"https:\\/\\/www.wvnews.com\\/\",\"domain\":\"wvnews.com\",\"documentLang\":\"en\"},\"ads\":[{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"impression_id\":\"98b7ede7-a255-451d-b98e-2400b5b0dc18\"}]}"
+  },
+  {
+   "resp": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063933&size_id=15&alt_size_ids=2%2C16%2C55%2C57%2C101%2C221&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=10572b5d0f02b4ef8&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=4c9f45a3-9cb9-49f0-887c-777c9830d383&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.12737813035810552",
+   "status": 200,
+   "body": "{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"account_id\":10904,\"site_id\":627081,\"zone_id\":4063933,\"size_id\":15,\"alt_size_ids\":[2,16,55,57,101,221],\"tracking\":\"\",\"inventory\":{\"page\":\"https:\\/\\/www.wvnews.com\\/\",\"domain\":\"wvnews.com\",\"documentLang\":\"en\"},\"ads\":[{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"impression_id\":\"3c37d84c-6c4e-4d98-9f86-df98e30a6ac1\"}]}"
+  },
+  {
+   "resp": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063923&size_id=2&alt_size_ids=55%2C57&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=107f5b41f1c48fd28&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=2c7a97a2-87f1-45d4-b9d0-259125740a63&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.3899589615430422",
+   "status": 200,
+   "body": "{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"account_id\":10904,\"site_id\":627081,\"zone_id\":4063923,\"size_id\":2,\"alt_size_ids\":[55,57],\"tracking\":\"\",\"inventory\":{\"page\":\"https:\\/\\/www.wvnews.com\\/\",\"domain\":\"wvnews.com\",\"documentLang\":\"en\"},\"ads\":[{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"impression_id\":\"8e37d0c8-f008-4195-a28c-cc102454b6f6\"}]}"
+  },
+  {
+   "resp": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063933&size_id=15&alt_size_ids=2%2C16%2C55%2C57%2C101%2C221&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=106207fbd3d87ad58&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=97f5b764-d7e1-4a72-b99e-b72ac9f3b3e4&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.8183439705766066",
+   "status": 200,
+   "body": "{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"account_id\":10904,\"site_id\":627081,\"zone_id\":4063933,\"size_id\":15,\"alt_size_ids\":[2,16,55,57,101,221],\"tracking\":\"\",\"inventory\":{\"page\":\"https:\\/\\/www.wvnews.com\\/\",\"domain\":\"wvnews.com\",\"documentLang\":\"en\"},\"ads\":[{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"impression_id\":\"8b585e96-406e-404c-beb0-148a1ef25f2a\"}]}"
+  },
+  {
+   "resp": "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=10904&site_id=627081&zone_id=4063929&size_id=15&alt_size_ids=9%2C8%2C10%2C19%2C67%2C117&rp_schain=1.0,1!monetizemore.com,aaef6323d5,1,,,&eid_33across.com=v1.0015a0000344WMYAA2.1059.tIerm4QIWnAEo5J7sz4C8C9x0kdVUEhZrh1SFUA5R4DjBm%2FYDtomu1jefqhGH9mHzFOpB%2BWGI1Fc5IpOILOWAv4HMn1ExRLZAj1INdtinm6%2Bq6a1%2B1Oahy56Lf88UbkXT1XjoUbfd0WPo9E9cGSyi6er44%2B3cD7Ktn4bouoVqM8TR%2B7ykqnC4J0gbeZy9FPZzriEztyJenQPF1dNxmWrTCEjtJvCGAFF%2FpY8%2FTFTIGIuXOle00PqzeFwnskwJGO%2BtAD%2BkKy%2Bn%2BXFkI7hQcDdNIdh%2FjR%2BwkjHTF2R4WswO8f1dGJC714kOZmV1mRvGIsdStX7nIkoslCZ%2FZR5d5u9jC1ncICWDuGOiQHUylnRpge%2BMxv3Jip7ydpVfz6IgARe2d7t1nVPVpjEbz2pCSH9qz3QN%2FWG35xch%2FOShevVVTMC5527HmgdBA%2FdERPy%2BvobexPzZN1ZP5%2BoLBi9HTm%2FUGh8xEy%2BjaAMJ0iY4mvbRA7oazpwOzrdjHDikaCC0cn58NO3R4ob19rMVLDAHBYv5n06uIsosK3yrssy26ZL16hXyorf9UkcT%2FDHyjVg5LGUorFnO9x0Fz2VydEqH7f4052CM%2F%2F00daacDENl5eqeTOQdAsWYpUckUXbxWd%2BZRbFl7W01TvZZT0GoHrNJ2lbM1eDg%2B9FK2BhwVqIs4WRSGkzDx3Umbc9WZMUV7CAlRW4G4Dm4%2B4hhn0zPrH6aisTcq31Wo2r61XT41Sdv0bCaDRkUdtgjfTKFeyA%2B5Q3elzVssJG%2F4FA5aPHBBKLzg5pkmB1V61XwUG7Aa30SXgLU1lJH%2B5DCTBQgfzTqgL3JueI4yvrOVjwg3pi2vCr00xxKC%2FcdZwl83AB06YdLZ4oTx85AHXCLARvEz5wrVmO2FqiN8kqAEJ0GEh%2BbdKvY5X1ui23mlDAQuVe0ZZaRwTIc%2FAzj1yCGpcrhG22ZLQq7RMMIOHsLEkrB51LmX8K8aFTf7eNtsRC5Qz7lrUmMrIyrvYnAnu9%2FsZ%2FXZupz6k1osxshDYm6RjGFXy1RvPAA5r0nPHdPBDqk6q4bZgtf4YHCRKyd%2BSCTeELF0O6YyR2FXykHyJsTN6E%2FBg61UAF8NDWdo1yyheiYUMW8WFH828xiW70JgLfbFIYtoeZKxCaA2Uv5w%2B8bd9RMrZIuskDJA4GaskoPHVjcQlm8Nf7V2%2BUVk0Ia%2B1E9k1GrkJCyMS%2BgQHcInBjQuAlxDWIuWpjG7ln%2Fl2fy0cwKnDbvWjTp9hgciTjSNFDymh3%2BeB8ECBA1JXoD%2F5fhOwJ5mkpsutgQnMWfwq2YU3r1QjYVXIm233vdVd1AKdi%2BQK%2FDhYC%2FRPr%2Fl6EU0ljOkUZShvaAyhRbN3zB5%2Fpra0vHHd%2FR96z4ycTKWE%2F3M%2FN3UaXdNCWsZZtHeai%5E1%5E%5E%5E%5E%5E&eid_criteo.com=QeSQuF8lMkZFb282QUJnY1MlMkJFUSUyRk5Fa3p0a0dNSE9rVnBTTU03TlVDdXphTnFuUEtWdiUyRlkwMnM1RUltMzdtVlc5Znp6dEhlUXR1ZVJraCUyQnMwRWtMa0klMkZEWDdSZyUzRCUzRA%5E1%5E%5E%5E%5E%5E&eid_pubcid.org=3629be4c-95f2-4890-87a5-277588e33782%5E1%5E%5E%5E%5E%5E&eid_adserver.org=e1ce19fc-73dd-47b1-a475-487217b1fab5%5E1%5E%5Eadserver.org%5Eadserver.org%5E4%5ETDID&rf=https%3A%2F%2Fwww.wvnews.com%2F&kw=NEWS%2CSPORTS%2CEVENTS%2CClarksburg%2CBridgeport%2CWVWestVirginia%2CCharleston%2CMorgantown%2CFairmont%2CWeston%2CGallipolis%2CPointPleasant%2CKeyser%2CPreston&tg_i.domain=wvnews.com&tg_i.page=https%3A%2F%2Fwww.wvnews.com%2F&tg_i.documentLang=en&tk_flint=pbjs_lite_v9.53.2&x_source.tid=a8e69708-74df-471a-8d81-948b2b32b506&l_pb_bid_id=1084b082b1ce4d18&p_screen_res=1280x720&rp_secure=1&x_imp.ext.tid=9e7f9adb-7643-4a82-9a29-b71ca72b009b&m_ch_ua=%22HeadlessChrome%22%7Cv%3D%22153%22%2C%22Not_A%20Brand%22%7Cv%3D%228%22%2C%22Chromium%22%7Cv%3D%22153%22&m_ch_mobile=%3F0&m_ch_platform=Linux&slots=1&rand=0.34994050377578445",
+   "status": 200,
+   "body": "{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"account_id\":10904,\"site_id\":627081,\"zone_id\":4063929,\"size_id\":15,\"alt_size_ids\":[9,8,10,19,67,117],\"tracking\":\"\",\"inventory\":{\"page\":\"https:\\/\\/www.wvnews.com\\/\",\"domain\":\"wvnews.com\",\"documentLang\":\"en\"},\"ads\":[{\"status\":\"error\",\"reason\":\"internal-error\",\"error_code\":\"17\",\"impression_id\":\"4415d24b-6ac9-4817-ae8a-5ebf5943c85f\"}]}"
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/stream?beacon=arinterval",
+   "body": "{\"streams\":[{\"stream\":\"pageviews\",\"base\":{},\"objects\":[{}]}],\"allBase\":{\"id\":\"e9143d08-2f6d-4a50-9d18-1323cf9e7fe9\",\"stream\":\"pageviews\",\"stage\":\"adrender\",\"environment\":{\"floorSource\":\"manual\",\"downlink\":\"10\",\"connectionEffectiveType\":\"4g\",\"rtt\":\"-1\",\"analyticsEnabled\":\"false\"},\"timeline\":{\"scriptStart\":6286,\"loaderStart\":4706,\"loaderToScript\":1580,\"consentResponse\":143,\"domReady\":143,\"gptReady\":143,\"firstAdRequest\":1805,\"firstAdRequestPage\":8091,\"firstAdResponse\":3368,\"firstAdRender\":3531,\"firstAdRenderPage\":9817},\"timestamp\":1793169783153,\"url\":\"https://www.wvnews.com/\",\"referrer\":\"/direct/\",\"cohort\":{\"build\":\"251231-6a1\",\"branch\":\"violet\",\"version\":\"lightning-100\",\"id\":\"4223\",\"updatedAt\":\"2609281229\",\"loader\":\"pg.wvnews.js\",\"buildFile\":\"260910-fd3-nc-35494c1166053c0502e954e845dcdf54\",\"splitPercent\":\"0.90\",\"scriptEncodedSize\":\"176838\",\"scriptDecodedSize\":\"510861\"},\"domain\":\"wvnews.com\",\"build\":\"260910-fd3\",\"configId\":\"18072\",\"file\":\"unnamed\",\"pageviewId\":\"9d63cb5d-2750-4ff8-82b5-4f65cae602a7\",\"userId\":\"a4f91815-34ed-4cf7-9b59-2c167c90f579\",\"sessionId\":\"4f2c1652-dd36-4817-985a-17858ec8da4d\",\"sessionDepth\":1,\"canonical\":\"www.wvnews.com/\",\"m2Canonical\":\"c2221387bd3e57b197e6bb834dd35b15\",\"analyticsPercent\":0.05,\"dfpNetwork\":\"52317695\",\"device\":\"desktop\",\"ip\":\"160.79.106.140\",\"country\":\"US\",\"region\":\"??\",\"isEu\":false,\"utmSource\":\"/empty/\",\"utmMedium\":\"/empty/\",\"utmContent\":\"/empty/\",\"utmTerm\":\"/empty/\",\"utmCampaign\":\"/empty/\",\"localStorage\":true,\"source\":\"leanscript\",\"sendType\":\"arinterval\"}}"
+  },
+  {
+   "resp": "https://a3.pubguru.net/stream?beacon=test",
+   "status": 200,
+   "body": ""
+  },
+  {
+   "resp": "https://a3.pubguru.net/stream?beacon=arinterval",
+   "status": 200,
+   "body": "{}"
+  },
+  {
+   "method": "POST",
+   "url": "https://a3.pubguru.net/stream?beacon=arinterval",
+   "body": "{\"streams\":[{\"stream\":\"ad_render\",\"base\":{},\"objects\":[{\"unit\":\"52317695/promo_block_1\",\"orderId\":4169469334,\"lineItemId\":7469669486,\"creativeId\":138623822835,\"timeToRender\":5431,\"size\":\"300x250\",\"coordinates\":\"916.66,747,300,250\",\"environment\":{\"adRenderSource\":\"tc\",\"analyticsEnabled\":\"false\",\"lazy\":\"true\",\"spa\":\"false\",\"vignette\":\"disabled\",\"fnInitDefined\":\"false\"},\"adRenderId\":\"5cdc0d48-3f4c-45ff-a8f7-7a143fe90043\",\"id\":\"4f69c5c0-ecbd-4131-b37b-6a54bc16e28a\",\"timestamp\":1793169788639,\"cohort\":{}},{\"unit\":\"52317695/WVNews/wvn_leaderboard-top-728\",\"orderId\":4169469334,\"lineItemId\":7469669486,\"creativeId\":138625007884,\"timeToRender\":5567,\"size\":\"728x90\",\"coordinates\":\"276,615,728,90\",\"environment\":{\"adRenderSource\":\"tc\",\"analyticsEnabled\":\"false\",\"lazy\":\"true\",\"spa\":\"false\",\"vignette\":\"disabled\",\"fnInitDefined\":\"false\"},\"adRenderId\":\"d7497c8c-e512-43b6-b3ae-3f1b520759c4\",\"id\":\"432aef0b-4bb3-4a63-bde9-9233e7c43188\",\"timestamp\":1793169788773,\"cohort\":{}},{\"unit\":\"52317695/WVNews/wvn_rightpanel-top-336\",\"orderId\":2904748518,\"lineItemId\":7448871812,\"creativeId\":138624188483,\"timeToRender\":5725,\"size\":\"300x250\",\"coordinates\":\"916.66,1366.39,300,250\",\"environment\":{\"adRenderSource\":\"tc\",\"analyticsEnabled\":\"false\",\"lazy\":\"true\",\"spa\":\"false\",\"vignette\":\"disabled\",\"fnInitDefined\":\"false\"},\"adRenderId\":\"675501c6-0372-4c5b-9c78-b80c0936906f\",\"id\":\"d327f514-5807-40f1-bdd2-8533359a290a\",\"timestamp\":1793169788931,\"cohort\":{}}]}],\"allBase\":{\"stream\":\"ad_render\",\"timestampInit\":1793169783206,\"renderCount\":1,\"bidder\":\"null\",\"bid\":0,\"winner\":\"??\",\"aspv\":\"\",\"documentSize\":\"\",\"collisionDetected\":\"\",\"viewPort\":\"\",\"collidingCoordinates\":\"\",\"event\":\"\",\"renderDuration\":\"\",\"source\":\"tc\",\"url\":\"https://www.wvnews.com/\",\"domain\":\"wvnews.com\",\"build\":\"260531-fe1\",\"file\":\"trafficcop-async-min-main.js\",\"userId\":\"a4f91815-34ed-4cf7-9b59-2c167c90f579\",\"sessionId\":\"4f2c1652-dd36-4817-985a-17858ec8da4d\",\"referrer\":\"/direct/\",\"canonical\":\"www.wvnews.com/\",\"m2_config\":\"18072-260531-fe1@0.00\",\"m2Canonical\":\"c2221387bd3e57b197e6bb834dd35b15\",\"configId\":\"18072\",\"splitPercent\":1,\"stagingPercent\":0,\"analyticsPercent\":0.1,\"dfpNetwork\":\"52317695\",\"gamNetwork\":\"52317695\",\"gamNetworkParent\":\"52317695\",\"gamNetworkChild\":\"\",\"device\":\"desktop\",\"pageviewId\":\"9d63cb5d-2750-4ff8-82b5-4f65cae602a7\",\"ip\":\"160.79.106.140\",\"sessionDepth\":1,\"country\":\"US\",\"region\":\"??\",\"utmSource\":\"/empty/\",\"utmMedium\":\"/empty/\",\"utmContent\":\"/empty/\",\"utmTerm\":\"/empty/\",\"utmCampaign\":\"/empty/\",\"localStorage\":true,\"screenWidth\":\"1280\",\"screenHeight\":\"720\",\"adblock\":false,\"cmp\":\"onpage\",\"gdpr\":\"skip-geo\",\"ccpa\":\"??\",\"lgpd\":\"??\",\"sendType\":\"arinterval\"}}"
+  },
+  {
+   "resp": "https://a3.pubguru.net/stream?beacon=arinterval",
+   "status": 200,
+   "body": "{}"
+  }
+ ],
+ "cookies": [
+  {
+   "name": "pg_last_pageview_data",
+   "value": "{\"cohortId\":\"4223\",\"cohortUpdatedAt\":\"2609281229\",\"configId\":18072}"
+  },
+  {
+   "name": "pg_buildfile",
+   "value": "260910-fd3-nc-35494c1166053c0502e954e845dcdf54"
+  },
+  {
+   "name": "pg_unq_cohort_key",
+   "value": "4223:2609281229"
+  },
+  {
+   "name": "pg_subsample_events",
+   "value": "0"
+  },
+  {
+   "name": "pg_anchorPercent",
+   "value": "1"
+  },
+  {
+   "name": "pg_rebid",
+   "value": "1"
+  },
+  {
+   "name": "pg_autoAd",
+   "value": "1"
+  },
+  {
+   "name": "pg_chaser",
+   "value": "1"
+  },
+  {
+   "name": "pg_mm2_cookieA",
+   "value": "a4f91815-34ed-4cf7-9b59-2c167c90f579"
+  },
+  {
+   "name": "pg_sessionId",
+   "value": "4f2c1652-dd36-4817-985a-17858ec8da4d"
+  },
+  {
+   "name": "pg_session_depth",
+   "value": "1"
+  },
+  {
+   "name": "pg_canonical_session",
+   "value": "www.wvnews.com/"
+  },
+  {
+   "name": "pg_lazy",
+   "value": "1"
+  },
+  {
+   "name": "pg_analytics",
+   "value": "0"
+  },
+  {
+   "name": "pg_anchorUnitFromConfig",
+   "value": "1"
+  },
+  {
+   "name": "pg_c",
+   "value": "08b9f7ce-9136-4436-9d2f-0d309d30b0c8"
+  },
+  {
+   "name": "pg_geo",
+   "value": "{\"country\":\"US\",\"region\":\"\",\"ip\":\"160.79.106.140\"}"
+  },
+  {
+   "name": "pg_ip",
+   "value": "160.79.106.140"
+  },
+  {
+   "name": "pg_beacon",
+   "value": "1"
+  },
+  {
+   "name": "pg_mm2_cookie_a",
+   "value": "a4f91815-34ed-4cf7-9b59-2c167c90f579"
+  },
+  {
+   "name": "pg_session_id",
+   "value": "4f2c1652-dd36-4817-985a-17858ec8da4d"
+  },
+  {
+   "name": "pg_tc",
+   "value": "not-sampled"
+  }
+ ],
+ "captchaShown": true
+}

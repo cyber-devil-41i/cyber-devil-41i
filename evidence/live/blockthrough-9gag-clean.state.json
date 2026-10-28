@@ -1,0 +1,70 @@
+{
+ "url": "https://9gag.com/",
+ "__bt_intrnl": {
+  "traceID": "Pi11sASh-pGBbWLsd-a181371fe8",
+  "stopFlag": false,
+  "timingLoggerBridge": {},
+  "aaDetectionResults": {
+   "ab": false,
+   "aa": true,
+   "nlf": false
+  },
+  "pageURL": "https://9gag.com/",
+  "tcData": {
+   "cmpId": 7,
+   "cmpVersion": 1,
+   "gdprApplies": false,
+   "tcfPolicyVersion": 5,
+   "listenerId": 16,
+   "eventStatus": "tcloaded",
+   "cmpStatus": "loaded"
+  },
+  "actions": {
+   "trustedIframeInjected": {
+    "5198325289058304": {
+     "Pi11sASh-pGBbWLsd-a181371fe8": true
+    }
+   },
+   "extensionDataReported": {
+    "5198325289058304": {
+     "Pi11sASh-pGBbWLsd-a181371fe8": true
+    }
+   },
+   "pvSent": {
+    "5198325289058304": {
+     "Pi11sASh-pGBbWLsd-a181371fe8": true
+    }
+   }
+  },
+  "device": {
+   "os": "Linux",
+   "ext": {
+    "fiftyonedegrees_deviceId": "15364-18110-148575-132572",
+    "fod": {
+     "tpc": 1
+    }
+   }
+  },
+  "extensionsData": {
+   "signals": {
+    "xAcceptableAdsHeader": ""
+   },
+   "trustedIframe": {
+    "meta": {
+     "loadStatus": "LOADED",
+     "loadTime": 540
+    },
+    "htmlSignalAttributes": []
+   }
+  }
+ },
+ "localStorage": {
+  "BT_tpc": "{\"value\":1,\"expiresAt\":1793183636448}",
+  "BT_AA_DETECTION": "{\"ab\":false,\"aa\":true,\"nlf\":false}",
+  "btUserCountry": "US",
+  "btUserIsFromRestrictedCountry": "false",
+  "BT_device": "{\"value\":{\"os\":\"Linux\",\"ext\":{\"fiftyonedegrees_deviceId\":\"15364-18110-148575-132572\"}},\"expiresAt\":1793183636446}",
+  "btUserCountryExpiry": "1793169542810"
+ },
+ "iframes": []
+}
