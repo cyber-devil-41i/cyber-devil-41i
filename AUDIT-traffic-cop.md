@@ -329,3 +329,68 @@ contains **"Eyeo Test Organization" — `ad-test.networkfiltering.eyeo-staging.i
    `NYPost.com`, `9Gag.com`).
 6. Corporate domains instead of the sites that are sold (`people.inc`, `pmc.com`,
    `yahooinc.com`, `wbd.com`), so buyers can't verify supply against `site.domain`.
+
+---
+
+# Part 5: How Blockthrough's technology works (reconstructed)
+
+Evidence labels: **[O]** observed (Tracker Radar crawl / real code / filter lists),
+**[P]** public industry fact, **[I]** inference from endpoint names and behaviour.
+The `btloader.com/tag` runtime itself could not be downloaded, so the internal
+detection code is **not** verified line by line.
+
+## Pipeline
+
+```
+ page loads ──► btloader.com/tag?o=<sellerId>|h=<host-key>&upapi=true      [O]
+      │          reads UA, Client Hints, screen, DPR, storage quota,        [O]
+      │          performance.memory, localStorage/sessionStorage
+      ▼
+ 1. CONFIG      GET /websiteconfig   per-site rules, which units to recover  [O][I]
+ 2. ENVIRONMENT GET /device, /country  device class + IP geo                [O][I]
+                iframe /cchecker.html  can 3rd-party cookies be set?        [O]
+ 3. DETECT      bait requests / bait elements checked → result to /exd       [I]
+                ("extension detection": which blocker, if any)
+                webkitTemporaryStorage quota → incognito flag               [O][I]
+ 4. DECIDE      no blocker        → do nothing (normal ad stack runs)       [I]
+                blocker + Acceptable Ads allowed → recover ads              [P][I]
+                blocker + AA off  → optional "please allowlist" message     [P]
+ 5. RECOVER     /trustedIframe.html  sandboxed frame on the Acceptable-Ads   [O][P]
+                allowlist; inside it, a Prebid auction to
+                pbs.btloader.com/openrtb2/auction (OpenRTB 2.5)            [O]
+                → user_sync.html cookie-matching for every bidder           [O]
+ 6. MEASURE     /pv page views, /log + /evts telemetry → revenue reporting  [O][I]
+```
+
+## Why the ads get through an adblocker
+- **[P]** Adblock Plus, AdBlock and other eyeo-licensed blockers ship the **Acceptable Ads**
+  exception list (on by default). Ads that meet its size, placement and labelling rules,
+  served from allowlisted infrastructure, aren't blocked. eyeo **owns** Blockthrough (acquired 2022):
+  the company that makes the blocker also sells the ads that get past it.
+- **[O]** Blockthrough's sellers.json contains "Eyeo Test Organization"
+  (`ad-test.networkfiltering.eyeo-staging.it`), so the two systems are tested together.
+- **[O]** Hard blockers (uBlock Origin, AdGuard) block `||btloader.com^` outright
+  (AdGuard Base filter, line 639). Acceptable Ads only works on blockers that opt in.
+
+## The anti-blocker lever: making btloader a dependency
+**[O]** Filter maintainers keep having to **un-block** btloader so sites stay usable:
+- `@@||btloader.com/tag?h=prismamedia-com&upapi=true$script,domain=maxisciences.com|gentside.*|ohmymag.*`
+  (uBO + AdGuard) — Prisma Media sites break or wall the page when the tag fails to load.
+- `||btloader.com/tag?$redirect=noopjs,domain=voici.fr` — AdGuard serves a **fake empty
+  script** so the page *thinks* btloader loaded.
+- `||btloader.com^$script,redirect=noopjs,domain=ign.com` — "video breakage" on IGN without it.
+- `@@||btloader.com/tag?$xhr,domain=quackr.io`.
+
+So publishers wire their pages so that "btloader didn't load" means "adblocker
+present", then show a wall or break features. That makes blocking btloader
+costly for the user, and that cost is the commercial pressure.
+
+## Second key format
+**[O]** The tag accepts `o=<16-digit sellers.json id>` **or** `h=<host key>`
+(e.g. `h=prismamedia-com`), mapping to the "Prisma Media" seller (`5644437305688064`).
+
+## What to do to verify the [I] items
+Allow `btloader.com` in the network settings, fetch `btloader.com/tag?o=5150306120761344&upapi=true`,
+run REA (`analyze-javascript-application`) for endpoints and storage keys, then load
+one page twice in Playwright (with and without a blocker extension) and diff the
+`/exd`, `/device` and `/pv` payloads.
