@@ -394,3 +394,73 @@ Allow `btloader.com` in the network settings, fetch `btloader.com/tag?o=51503061
 run REA (`analyze-javascript-application`) for endpoints and storage keys, then load
 one page twice in Playwright (with and without a blocker extension) and diff the
 `/exd`, `/device` and `/pv` payloads.
+
+---
+
+# Part 6: Blockthrough detection, from live-site captures
+
+The sandbox blocks every publisher site, so the captures come from **real browser
+sessions other people recorded and published on GitHub**:
+
+| Capture | Site / seller | btloader version |
+|---|---|---|
+| `simonw/research` pcgamer-audit/network-log-video.json | pcgamer.com, `o=5682682429177856` = **Future PLC** | `cv=2.1.184-3-g2982370` |
+| `AsmaAslam943/tracker-radar` results/raw/nexusmods.com_6cbd.json | nexusmods.com, `o=5150306120761344` = **Playwire** | `cv=2.1.186` |
+| `howtorightclick/ResourceScraper` results/9gag-com_root_b9326d8d.json | 9gag.com | `cv=2.1.192` |
+| `JingyZhu/static_replay` atxtoday.6amcity.com | 6amcity.com, `o=5698917485248512` = **Cafe Media** | `cv=2.1.67` (2023) |
+
+The tag script is 32 KB on the wire and **99 KB decoded** (PC Gamer), 50 KB on Nexus Mods.
+The PC Gamer subset is committed as `evidence/pcgamer_btloader.har` and was processed with
+REA `inspect-web-network-capture` (evidence id `ev_0ef20f2e44aa6e9a7b4c04f48101e58c0e9dbe943b444375db87b7ba16327dfd`). REA normalised the
+15 records. The capture has no request/response bodies, so REA could not decode payloads;
+the analysis below comes from the request sequence.
+
+## Observed sequence (PC Gamer, ms after the tag loads)
+
+```
+   0  GET  btloader.com/tag?o=5682682429177856        (loaded by Google Tag Manager)
+1300  GET  ad-delivery.net/px.gif?ch=2&e=<random>     ┐
+1301  GET  ad.doubleclick.net/favicon.ico?ad=300x250&ad_box_=1&adnet=1&showad=1&size=250x250&e=<random>
+1302  GET  ad-delivery.net/px.gif?ch=1&e=<random>     │ ROUND 1 – bait
+1303  GET  ab.dns-finder.com/meta/dns                 ┘
+1321  GET  btloader.com/trustedIframe.html            sandboxed frame
+1606  POST api.btloader.com/exd?tid=…&sid=…&cv=…      DETECTION RESULT
+1783–1976                                           ROUND 2 – same bait again
+2606                                                ROUND 3 – same bait + dns-finder again
+5288  POST api.btloader.com/pv?nlf=false&tid=…&sid=…  PAGE VIEW (sent via Future's bordeaux.js)
+```
+Nexus Mods shows the same pattern with **6 rounds**, then `/country` and `/pv`.
+
+## How the detection works
+
+| Probe | What it tests |
+|---|---|
+| `ad.doubleclick.net/favicon.ico?ad=300x250&ad_box_=1&adnet=1&showad=1&size=250x250` | **Network-level blocker bait.** A real Google ad domain plus a URL stuffed with ad keywords that EasyList-style rules match. The file asked for is a harmless favicon, so a blocked/failed fetch means a blocker is present. |
+| `ad-delivery.net/px.gif?ch=1` vs `?ch=2` | **Two channels.** Same domain, two variants, so the script can tell blockers apart: one variant is caught by generic ad lists, the other only by stricter lists. The likely use is separating "blocks ads but allows Acceptable Ads" (Adblock Plus default) from "blocks everything" (uBlock Origin). *(Channel semantics are inferred; not verified from code.)* |
+| `ab.dns-finder.com/meta/dns` | **DNS-level blocker detection** ("ab" = adblock). Pi-hole, NextDNS and AdGuard DNS block by hostname, so an extension check misses them; a failing hostname lookup reveals them. |
+| Repeated rounds (3 on PC Gamer, 6 on Nexus Mods) | Blockers that start late, or allowlists that change at runtime, can flip results. Repeats reduce false positives. |
+| `e=<Math.random()>` on each probe | Cache-buster, so a cached response can't fake a pass. |
+
+All probes returned **200** in these captures (the crawlers ran no blocker), so these
+sessions record a "no blocker" verdict. The recovery path (serving ads through the trusted
+iframe) wasn't triggered.
+
+## What gets reported
+
+- `POST /exd`: the detection verdict, with `tid` (visitor/tab ID), `sid` (session ID)
+  and `cv` (client version). Both IDs end in the same 10-hex suffix (`9d45e0cf8d`), likely a
+  site or day salt. Returns 204.
+- `POST /pv`: the page view (`nlf` flag). The older 2023 build (`cv=2.1.67`) sent it as a
+  GET with readable parameters:
+  `w=4807542652010496` (website ID), `o=5698917485248512` (seller), `vr=1920x1080`
+  (viewport), `pageURL=<full article URL>`, `r=true`, `rt=0`, **`aa=false`
+  (Acceptable Ads status)**, **`pm=false`** (likely private mode, which fits the observed
+  `webkitTemporaryStorage` check), `widget=false`, `checksum=5d933e03`. Newer builds moved
+  these into the POST body, out of sight in URL-only logs.
+- `GET /country?o=…` returns a JSON country code, with CORS `*`.
+- `GET /websiteconfig?bt_env=prod&o=…&w=<domain>`: per-site configuration.
+
+## Still unverified (needs the 99 KB script)
+- Exact payload fields of `/exd` and `/pv`.
+- What `ch=1` / `ch=2` map to, and how the verdict is computed from probe results.
+- The recovery branch: what the trusted iframe loads when a blocker *is* found.
