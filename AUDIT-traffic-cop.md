@@ -242,3 +242,90 @@ Setupad, PubFuture, Playwire and others. Of the 18 `DIRECT` lines, 11 come from
 **one identical 1,184-line template** ("Arcane Technologies") copied across
 unrelated repos. An ads.txt line shows that someone pasted text,
 not that a MonetizeMore tag runs on the site.
+
+---
+
+# Part 4: Blockthrough (adblock ad-recovery) — sellers.json + what it collects
+
+## Sources
+- Blockthrough sellers.json, pasted by the user (~130 sellers, cut off at the end).
+- Google sellers.json: `pub-3792796726804880` "Blockthrough Inc.", `seller_type: BOTH`.
+- DuckDuckGo Tracker Radar `domains/US/btloader.com.json` (owner: Blockthrough Inc.,
+  **3,798 sites**, fingerprinting score 2 of 3).
+- Blockthrough's own open-source Prebid bidder, `prebid/Prebid.js` `modules/blockthroughBidAdapter.js`
+  (analysed with REA 6.8.0 plus a manual read).
+- Crawled loader snippets (`CBA-UPC/clean_resources`, `Nun0Alv3s/JS_DATASET`,
+  `rayngan999/Obfuscation-Automation`). These are loader tags only; no copy of the btloader runtime was found.
+- `btloader.com` itself is blocked in this sandbox, so the runtime script was **not** decompiled.
+
+## The tag carries the seller ID
+`https://btloader.com/tag?o=<id>&upapi=true` — the `o=` parameter is the **sellers.json
+seller_id**. From the crawled snippets:
+
+| `o=` | Seller (Blockthrough sellers.json) |
+|---|---|
+| 5150306120761344 | Playwire LLC (INTERMEDIARY) |
+| 5184339635601408 | Azerion Technology B.V / pubgalaxy.com (PUBLISHER) |
+| 5098683085881344 | Slashdot Media, LLC (PUBLISHER) |
+| 5071905434894336, 5659168086163456, 5075500865683456 | not in the pasted part of the file |
+
+So any page's source maps straight to the Blockthrough account that gets paid. One
+snippet (`web_38489.js`) loads Blockthrough **only `if (window.isBlocked)`**, so the
+publisher runs its own adblock detection and calls Blockthrough only for blocked users.
+
+## Publishers observed running btloader (Tracker Radar) vs sellers.json
+Exact domain matches: **9gag.com, msn.com**. The file lists *corporate* domains, so
+exact matching misses most sites. Matches by ownership: people.com, verywellhealth.com,
+liveabout.com → **People Inc.**; tvguide.com → **Fandom**. Other observed sites (likely sold
+through intermediaries such as Playwire, Freestar, CafeMedia, Venatus): 9to5mac, drudgereport,
+knowyourmeme, myanimelist, screenrant, collider, makeuseof, tutorialspoint, polygon,
+popsugar, sueddeutsche.de, wordreference, icy-veins, emojipedia and 100+ more.
+
+## What Blockthrough collects (observed in the browser, Tracker Radar)
+`btloader.com/tag` (2,409 sites):
+- `userAgent`, `platform`, **`getHighEntropyValues`** (full UA Client Hints: OS version, model, architecture)
+- `screen.width/height`, `devicePixelRatio`, `innerWidth/Height`
+- **`navigator.webkitTemporaryStorage`**: storage-quota check, a known **incognito / private-mode detector**
+- `performance.memory` (Chrome-only, also used to spot automation), `connection`
+- `localStorage`, `sessionStorage`
+
+Endpoints called (each one says what it is for):
+| Endpoint | Sites | Purpose (from name / type) |
+|---|---|---|
+| `/cchecker.html` (iframe, sets/reads cookies) | 2,153 | third-party cookie-support test |
+| `/trustedIframe.html` | 2,136 | sandboxed frame used to render "acceptable ads" |
+| `/device` | 2,133 | device classification |
+| `/exd` | 1,606 | extension / adblocker detection result |
+| `/country` | 751 | geo lookup (IP) |
+| `/pv` | 707 | page-view beacon |
+| `/websiteconfig` | 462 | per-site config |
+| `/log`, `/evts` | 35 | event telemetry |
+
+**The "block" decision** is adblock detection, not human-vs-bot: detect the blocker → check
+whether the user's list allows Acceptable Ads (Blockthrough belongs to eyeo, which runs
+Adblock Plus) → serve recovered ads through the trusted iframe. Its sellers.json even
+contains **"Eyeo Test Organization" — `ad-test.networkfiltering.eyeo-staging.it`**.
+
+## What the Prebid bidder sends (real source code)
+- POSTs a full **OpenRTB 2.5** request to `https://pbs.btloader.com/openrtb2/auction`
+  (Blockthrough's own Prebid Server). That includes everything Prebid's `ortbConverter`
+  fills in: `site` (page URL, referrer, domain), `device` (UA, screen, language), `user`
+  (**eids**: SharedID / UnifiedID etc. if the publisher has ID modules), `regs` (GDPR/USP/GPP).
+- `imp.ext` = the raw publisher params plus `gpid`.
+- **User-sync iframe** `cdn.btloader.com/user_sync.html?bidders=<every bidder that answered>`
+  with `gdpr_consent`, `gpp` and `us_privacy`. This is cookie-matching for **every downstream bidder**.
+- Test switch: adding **`?btServerTest=true`** to a page URL sets `request.test = 1`.
+- IAB GVL vendor ID **815**, so Blockthrough relies on TCF consent in the EU.
+
+## Defects in Blockthrough's sellers.json
+1. **Staging/test seller in production**: "Eyeo Test Organization", `ad-test.networkfiltering.eyeo-staging.it`.
+2. **Two ID formats**: 16-digit IDs plus 8-hex IDs (`f65cfbd4`, `d137d16e`, …) for the German
+   block, which looks like a merged acquired file (the Yieldlove/IQ Digital publishers).
+3. `pub-3792796726804880` is listed in Blockthrough's own file as `INTERMEDIARY`, but
+   Google lists the same account as `BOTH`: the two files disagree.
+4. One domain, **`iqdigital.de`**, covers four different legal entities (ZEIT, FAZ,
+   Handelsblatt, IQ Digital): the sales house's domain instead of each publisher's.
+5. Typos: "Nextstar" (Nexstar), "Mediahius" (Mediahuis); mixed-case domains (`Crazygames.com`,
+   `NYPost.com`, `9Gag.com`).
+6. Corporate domains instead of the sites that are sold (`people.inc`, `pmc.com`,
+   `yahooinc.com`, `wbd.com`), so buyers can't verify supply against `site.domain`.
